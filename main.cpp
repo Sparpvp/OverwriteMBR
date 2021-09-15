@@ -1,8 +1,3 @@
-/*
-This script is only for educational purposes, please don't run this code in a real pc.
-I dissociate myself from any illegal use of this file.
-*/
-
 #include <Windows.h>
 #include <iostream>
 
